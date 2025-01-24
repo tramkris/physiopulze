@@ -1,0 +1,85 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block bodycontent %}
+<section class="py-3 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/treatments-offered" style="text-decoration:none"><i
+                            class="bx bx-home-alt fs-lg me-1"></i>Treatmentsoffered</a>
+                </li>
+                <li class="breadcrumb-item fw-bold active" aria-current="page">Joint Pain</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold">Joint Pain</h2>
+        <div class="row g-2">
+            <!-- End Col -->
+            <div class="col-xl-4">
+                <p>Peripheral joints include the joints in the upper and lower extremities, 
+                    such as the shoulder, elbow, wrist, hand, hip, knee, ankle, and foot.
+                    And they are not in the spine area. 
+                    <br> <br> Peripheral joints can be injured through
+                    trauma, degeneration(general wear and tear), repetitive activities, overuse and disease.  
+                    Common injuries to peripheral joints include dislocations, subluxations, sprains,
+                    strains, tears, inflammatory conditions like rotator cuff tendonitis and degenerative 
+                    conditions like arthritis.
+                    <br> <br> Physiotherapy for joint pain offers diverse strategies to relieve joint pain 
+                    by targeting the root cause and enhancing joint function. The treatment's effectiveness 
+                    lies in its personalized approach, addressing specific joint issues while considering
+                    individual needs. The combination of exercises, therapies and education empowers 
+                    individuals to actively manage their joint health, offering sustained relief 
+                    and improved joint function.
+                </p>
+            </div>
+            <div class="col-xl-5">
+                <img src="{% static "imagesservices/jointpain.jpg" %}" class="rounded">
+            </div>
+            <div class="col-xl-3">
+                <div class="container py-2 p-4" style="background-color:blue">
+                    <h5 class="text-white fw-bold">Treatments Offered</h5>
+                    <nav class="navbar">
+                        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                            {% with url_name=request.resolver_match.url_name %}
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'backpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/back-pain">Back pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'jointpain' %} active text-white{% endif %}"
+                                    href="/treatments-offered/joint-pain">Joint
+                                    Pain</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neckpain' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neck-pain">Neck Pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'headaches' %} active text-white{% endif %}"
+                                    href="/treatments-offered/head-aches">Headaches</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'strainssprains' %} active text-white{% endif %}"
+                                    href="/treatments-offered/strains-sprains">Strains & Sprains </a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'sportsinjury' %} active text-white{% endif %}"
+                                    href="/treatments-offered/sports-injury">Sports
+                                    Injury</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'orthorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/ortho-rehabilitation">Ortho Rehabilitation</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neurorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neuro-rehabilitation">Neuro Rehabilitation</a></li>
+                        </ul>
+                        {% endwith %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

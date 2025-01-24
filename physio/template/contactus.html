@@ -1,0 +1,96 @@
+{%extends 'base.html'%}
+
+{% block bodycontent %}
+<section class="py-3 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item active fw-bold" aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold py-2">Contact Us</h2>
+        <div class="row py-3">
+            <div class="col-xl-3 col-lg-3 pb-4 pb-sm-5 mb-2 mb-sm-0">
+                <br>
+                <h6 class="mb-2 text-dark fw-bold">Physio Pulze Physiotherapy</h6>
+                <p class="text-secondary">JK Complex, 52A, Anna Street, <br>Sholinganallur, Chennai,
+                    <br>Tamilnadu - 600119
+                </p>
+                <p class="mb-2"><a class="text-secondary fw-bold" style="text-decoration:none"
+                        href="tel:+919940206075">Give us a
+                        Call <br>+91 9940206075</a></p>
+                <hr>
+                <h6 class="mb-2 text-dark fw-bold">Opening Hours</h6>
+                <p class="text-secondary">Mon-Sat <br> 9:00am - 1:00pm <br> 4:30pm - 8:30pm <br> Sun <br>
+                    10:00am - 12:00pm</p>
+            </div>
+            <!-- End Col -->
+            <div class="col-xl-9 col-lg-9 px-6">
+                <!-- Card -->
+                <div class="card border-light shadow-lg p-sm-8 p-md-8">
+                    <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block">
+                    </div>
+                    <div class="card-body position-relative zindex-2">
+                        <h2 class="card-title pb-2 mb-3 fw-bold">Send Message</h2>
+                        <form action="/contact/" method="POST" class="row g-4 needs-validation">
+                            {% csrf_token %}
+                            <div class="col-sm-6">
+                                <!-- Form -->
+                                <label class="form-label fw-bold" for="contactsFormName">Name *</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Full Name"
+                                    required>
+                                <!-- End Form -->
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-sm-6">
+                                <!-- Form -->
+                                <label class="form-label fw-bold" for="contactsFormSubject">Subject *</label>
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                                <!-- End Form -->
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-sm-6">
+                                <!-- Form -->
+                                <label class="form-label fw-bold" for="contactsFormEmail">Email *</label>
+                                <input type="email" class="form-control" name="email" id="contactsFormEmail"
+                                    placeholder="Email Address" required>
+                            </div>
+                            <!-- End Form -->
+                            <div class="col-sm-6">
+                                <!-- Form -->
+                                <label class="form-label fw-bold" for="contactsFormPhone">Phone Number *</label>
+                                <input type="text" class="form-control" name="phone" id="phone"
+                                    placeholder="Phone Number" required>
+                                <!-- End Form -->
+                            </div>
+                            <!-- End Col -->
+                            <!-- Form -->
+                            <div class="mb-2">
+                                <label class="form-label fw-bold" for="contactsFormMessage">Your Message *</label>
+                                <textarea class="form-control" name="message" id="message" placeholder="Your Message"
+                                    rows="2" required></textarea>
+                            </div>
+                            <!-- End Form -->
+                            <!-- End Row -->
+                            <div class="mb-2">
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold">Send Message</button>
+                            </div>
+                            <!-- End Row -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End Col -->
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0576357198474!2d80.22685957507528!3d12.904015487405191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c7e7fd46bcd%3A0xffe7837cb5271453!2sPhysio%20Pulze!5e0!3m2!1sen!2sin!4v1733304011540!5m2!1sen!2sin"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+</section>
+{% endblock %}

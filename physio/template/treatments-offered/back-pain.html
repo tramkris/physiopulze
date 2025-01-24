@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block bodycontent %}
+<section class="py-3 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/treatments-offered" style="text-decoration:none"><i
+                            class="bx bx-home-alt fs-lg me-1"></i>Treatmentsoffered</a>
+                </li>
+                <li class="breadcrumb-item fw-bold active" aria-current="page">Back Pain</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold">Back Pain</h2>
+        <div class="row g-2">
+            <div class="col-xl-5">
+                <img src="{% static 'imagesservices/backpain.jpg' %}" class="rounded">
+            </div>
+            <!-- End Col -->
+            <div class="col-xl-4">
+                <p>Back pain is one of the most common medical problems. Sometimes it can come on suddenly
+                    from an accident, a fall or lifting something heavy or it can develop slowly
+                    because of age-related degenerative changes in the spine. In some cases,
+                    inflammatory arthritis disorders or other medical conditions cause back pain.
+                    Structures which can cause pain include joints, muscles, ligaments, nerves and discs.
+                    <br> <br>Physiotherapists can treat lower back pain using techniques, including manual therapy,
+                    miofacial release, deep tissue release and strength training.
+                </p>
+            </div>
+            <div class="col-xl-3">
+                <div class=" container py-2 p-4" style="background-color:blue">
+                    <h5 class="text-white fw-bold">Treatments Offered</h5>
+                    <nav class="navbar">
+                        <ul class="navbar-nav">
+                            {% with url_name=request.resolver_match.url_name %}
+                            <li class="nav-item"> <a 
+                                    class="nav-link fw-bold {% if url_name == 'backpain' %}active text-white{% endif %}" 
+                                    href="/treatments-offered/back-pain">Back pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'jointpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/joint-pain">Joint
+                                    Pain</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neckpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/neck-pain">Neck
+                                    Pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'headaches' %}active text-white{% endif %}"
+                                    href="/treatments-offered/head-aches">Headaches</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'strains&sprains' %}active text-white{% endif %}"
+                                    href="/treatments-offered/strains-sprains">Strains & Sprains</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'sportsinjury' %}active text-white{% endif %}"
+                                    href="/treatments-offered/sports-injury">Sports
+                                    Injury</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'orthorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/ortho-rehabilitation">Ortho Rehabilitation</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neurorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neuro-rehabilitation">Neuro Rehabilitation</a></li>
+                            {% endwith %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

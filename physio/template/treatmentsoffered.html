@@ -1,0 +1,130 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block bodycontent %}
+<section class="py-5 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Treatments Offered</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold">Treatments Offered</h2>
+        <div class="row py-4">
+            <div class="col-xl-12">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/back pain.jpg" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Back pain</h5>
+                                <p class="card-text">Back pain is one of the most common medical problems.
+                                    Sometimes it can come on suddenly from an accident, a fall
+                                </p>
+                                <a class="text-link" href="/treatments-offered/back-pain">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/joint pain.jpg" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Joint Pain</h5>
+                                <p class="card-text">Peripheral joints include the joints in the upper
+                                    and lower extremities, such as the shoulder, elbow, wrist, hand,
+                                    hip, knee, ankle, and foot.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/joint-pain">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/neck pain.jpg" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Neck Pain</h5>
+                                <p class="card-text">Human head is balanced on a support made up of
+                                    seven bones which are separated from each other by discs
+                                </p>
+                                <a class="text-link" href="/treatments-offered/neck-pain">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/head aches.jpg" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Headaches</h5>
+                                <p class="card-text">Some of the most common headaches include: Tension
+                                    headache: Usually caused by tension in the muscles of the shoulder,
+                                    neck or face.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/head-aches">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/strainssprains.jpg" %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Strains & Sprains</h5>
+                                <p class="card-text">A sprain injures the bands of tissue that connect two
+                                    bones together. Sprained ligaments include the knee, ankle, wrist and thumb
+                                    ligaments.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/strains-sprains">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/sports injury.jpg" %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Sports Injury</h5>
+                                <p class="card-text">There are two kinds of sports injuries: acute and
+                                    chronic. An injury that occurs suddenly, such as a sprained ankle
+                                    caused by an awkward landing.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/sports-injury">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/ortho.jpg" %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Ortho Rehabilitation</h5>
+                                <p class="card-text">We offer specialized rehabilitation for Osteo arthritis, Rhematoid arthritis, 
+                                    Post fracture management, total knee, hip replacement and post ligment 
+                                    repair.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/ortho-rehabilitation">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "Servicesongrouppage/neuro.jpg" %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Neuro Rehabilitation</h5>
+                                <p class="card-text">We have successfully rehabilitated patients with GBS, stroke, CP, peripheral nurve injury,
+                                    stroke, brachial flexus injury and other neuro conditions.
+                                </p>
+                                <a class="text-link" href="/treatments-offered/neuro-rehabilitation">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

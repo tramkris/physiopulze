@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block bodycontent %}
+<section class="py-3 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/treatments-offered" style="text-decoration:none"><i
+                            class="bx bx-home-alt fs-lg me-1"></i>Treatmentsoffered</a>
+                </li>
+                <li class="breadcrumb-item fw-bold active" aria-current="page">Sports Injury</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold">Sports Injury</h2>
+        <div class="row g-2">
+            <!-- End Col -->
+            <div class="col-xl-4">
+                <p>There are two kinds of sports injuries: acute and chronic. An injury that occurs
+                    suddenly, such as a sprained ankle caused by an awkward landing, is known as an
+                    acute injury. Chronic injuries are caused by repeated overuse of muscle groups
+                    or joints.
+                    <br><br> Physiotherapy offers a comprehensive approach to sports injury 
+                    rehabilitation, ensuring athletes recover fully and return to their sport 
+                    stronger and more resilient. Sports physiotherapists utilize advanced techniques
+                    to complement traditional treatment methods, providing holistic care to athletes.
+                    Some of these techniques include: kinesiology taping, dry needling and 
+                    myofascial release.
+                </p>
+            </div>
+            <div class="col-xl-5">
+                <img src="{% static "imagesservices/sportsinjury.jpg" %}" class="rounded">
+            </div>
+            <div class="col-xl-3">
+                <div class="container py-2 p-4" style="background-color:blue;">
+                    <h5 class="text-white fw-bold">Treatments Offered</h5>
+                    <nav class="navbar">
+                        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                            {% with url_name=request.resolver_match.url_name %}
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'backpain' %} active text-white{% endif %}"
+                                    href="/treatments-offered/back-pain">Back pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'jointpain' %} active text-white{% endif %}"
+                                    href="/treatments-offered/joint-pain">Joint
+                                    Pain</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neckpain' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neck-pain">Neck Pain</a>
+                            </li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'headaches' %} active text-white{% endif %}"
+                                    href="/treatments-offered/head-aches">Headaches</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'strainssprains' %} active text-white{% endif %}"
+                                    href="/treatments-offered/strains-sprains">Strains & Sprains</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'sportsinjury' %} active text-white{% endif %}"
+                                    href="/treatments-offered/sports-injury">Sports
+                                    Injury</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'orthorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/ortho-rehabilitation">Ortho Rehabilitation</a></li>
+                            <li class="nav-item"> <a
+                                    class="nav-link fw-bold {% if url_name == 'neurorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neuro-rehabilitation">Neuro Rehabilitation</a></li>
+                        </ul>
+                        {% endwith %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

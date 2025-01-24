@@ -1,0 +1,86 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block bodycontent %}
+<section class="py-3 bg-info">
+    <div class="container">
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="/" style="text-decoration:none"><i class="bx bx-home-alt fs-lg me-1"></i>Physio Pulze
+                        Physiotherapy</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/treatments-offered" style="text-decoration:none"><i
+                            class="bx bx-home-alt fs-lg me-1"></i>Treatmentsoffered</a>
+                </li>
+                <li class="breadcrumb-item fw-bold active" aria-current="page">Headaches</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold">Headaches</h2>
+        <div class="row g-2">
+            <!-- End Col -->
+            <div class="col-xl-4">
+                <p>Some of the most common headaches include:
+                    <b>Tension headache:</b> Usually caused by tension in the muscles of the shoulder, 
+                    neck or face, tension headaches usually give a sensation of pressure all the 
+                    way around the head and can cause nausea and light sensitivity.
+                    <br><b>Cervicogenic headaches:</b> These are caused by pain referred from tissues in the neck. 
+                    They usually cause pain on one side of the head from the base of the skull to the 
+                    temple of the eye and are aggravated by neck movements.
+                    <br><br>In the case of tension headaches, our physiotherapist will relax and unlock the muscles, 
+                    releasing the tension that is causing the pain. They will also look at lifestyle factors
+                    that might be contributing to the problem, such as stress, and help you to manage these.
+                    <br><br>For cervicogenic headaches, the goal will be to address the neck issue at the root 
+                    of the problem. This could involve manipulation, massage or mobilisation. Our physiotherapist will 
+                    likely teach you exercises to perform regularly, which will help to relieve the problem.
+                    Poor posture is a common cause of cervicogenic headaches, our physiotherapist will also 
+                    look at your posture and ask about your living/working space to address that problem.
+                </p>
+            </div>
+            <div class="col-xl-5">
+                <img src="{% static "imagesservices/headaches.jpg" %}" class="rounded">
+            </div>
+            <div class="col-xl-3">
+                <div class="container py-2 p-4" style="background-color:blue">
+                    <h5 class="text-white fw-bold">Treatments Offered</h5>
+                    <nav class="navbar">
+                        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                            {% with url_name=request.resolver_match.url_name %}
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'backpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/back-pain">Back pain</a>
+                            </li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'jointpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/joint-pain">Joint
+                                    Pain</a></li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'neckpain' %}active text-white{% endif %}"
+                                    href="/treatments-offered/neck-pain">Neck Pain</a>
+                            </li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'headaches' %}active text-white{% endif %}"
+                                    href="/treatments-offered/head-aches">Headaches</a></li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'strains&sprains' %}active text-white{% endif %}"
+                                    href="/treatments-offered/strains-sprains">Strains & Sprains</a></li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'sportsinjury' %}active text-white{% endif %}"
+                                    href="/treatments-offered/sports-injury">Sports
+                                    Injury</a></li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'orthorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/ortho-rehabilitation">Ortho Rehabilitation</a></li>
+                            <li class="nav-item fw-bold"> <a
+                                    class="nav-link {% if url_name == 'neurorehabilitation' %} active text-white{% endif %}"
+                                    href="/treatments-offered/neuro-rehabilitation">Neuro Rehabilitation</a></li>
+                        </ul>
+                        {% endwith %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
