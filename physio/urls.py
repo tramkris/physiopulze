@@ -4,6 +4,14 @@ from django.urls import path, include
 from . import views
 from physio.views import contact, success
 
+# Added for Sitemap changes
+from django.contrib.sitemaps.views import sitemap
+from physio.sitemaps import StaticSitemap
+
+sitemaps={
+    'static': StaticSitemap
+}
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('contact-us', views.contactus, name='contactus'),
@@ -20,4 +28,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps})
 ]
