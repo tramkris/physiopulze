@@ -8,6 +8,9 @@ from physio.views import contact, success
 from django.contrib.sitemaps.views import sitemap
 from physio.sitemaps import StaticSitemap
 
+# Added for robots.txt changes
+from django.views.generic.base import TemplateView
+
 sitemaps={
     'static': StaticSitemap
 }
@@ -28,5 +31,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
-    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps})
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}),
+    path('robots.txt/', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"))
 ]
