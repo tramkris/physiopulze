@@ -1,6 +1,7 @@
 {%extends 'base.html'%}
 {% load static %}
 
+{% block title %} Back Pain | {% endblock %}
 {% block bodycontent %}
 <section class="py-3 bg-info">
     <div class="container">
@@ -17,7 +18,7 @@
                 <li class="breadcrumb-item fw-bold active" aria-current="page">Back Pain</li>
             </ol>
         </nav>
-        <h2 class="fw-bold">Back Pain</h2>
+        <h1 class="fw-bold">Back Pain</h1>
         <div class="row g-2">
             <div class="col-xl-5">
                 <img src="{% static 'imagesservices/backpain.jpg' %}" class="rounded" alt="Back Pain">
