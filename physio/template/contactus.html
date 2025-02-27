@@ -15,28 +15,13 @@
         </nav>
         <h1 class="fw-bold py-2">Contact Us</h1>
         <div class="row py-3">
-            <div class="col-xl-3 col-lg-3 pb-4 pb-sm-5 mb-2 mb-sm-0">
-                <br>
-                <h6 class="mb-2 text-dark fw-bold">Physio Pulze Physiotherapy</h6>
-                <p class="text-secondary">JK Complex, 52A, Anna Street, <br>Sholinganallur, Chennai,
-                    <br>Tamilnadu - 600119
-                </p>
-                <p class="mb-2"><a class="text-secondary fw-bold" style="text-decoration:none"
-                        href="tel:+919940206075">Give us a
-                        Call <br>+91 9940206075</a></p>
-                <hr>
-                <h6 class="mb-2 text-dark fw-bold">Opening Hours</h6>
-                <p class="text-secondary">Mon-Sat <br> 9:00am - 1:00pm <br> 4:30pm - 8:30pm <br> Sun <br>
-                    10:00am - 12:00pm</p>
-            </div>
-            <!-- End Col -->
             <div class="col-xl-9 col-lg-9 px-6">
                 <!-- Card -->
                 <div class="card border-light shadow-lg p-sm-8 p-md-8">
                     <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block">
                     </div>
                     <div class="card-body position-relative zindex-2">
-                        <h2 class="card-title pb-2 mb-3 fw-bold">Send Message</h2>
+                        <h2 class="card-title pb-2 mb-3 fw-bold">Send Us Mail</h2>
                         <form action="/contact/" method="POST" class="row g-4 needs-validation">
                             {% csrf_token %}
                             <div class="col-sm-6">
@@ -79,7 +64,7 @@
                             <!-- End Form -->
                             <!-- End Row -->
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-primary btn-lg fw-bold">Send Message</button>
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold">Send</button>
                             </div>
                             <!-- End Row -->
                         </form>
@@ -88,10 +73,77 @@
             </div>
             <!-- End Col -->
         </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0576357198474!2d80.22685957507528!3d12.904015487405191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c7e7fd46bcd%3A0xffe7837cb5271453!2sPhysio%20Pulze!5e0!3m2!1sen!2sin!4v1733304011540!5m2!1sen!2sin"
-            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <div class="bg-light">
+            <h2 class="mt-2 py-3 px-2 fw-bold">Physio Pulze Locations</h2>
+            <ul class="nav nav-pills mb-3 px-2" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active fw-bold" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">SHOLINGANALLUR</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link fw-bold" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">OKKIAM
+                        THURAIPAKKAM</button>
+                </li>
+            </ul>
+            <div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="container tab-pane active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <br>
+                                <p>JK Complex, 52A, Anna Street, Sholinganallur, Chennai,
+                                    Tamilnadu - 600119
+                                </p>
+                                <p>Mon-Sat 9:00am - 1:00pm, 4:30pm - 8:30pm. Sun 10:00am - 12:00pm
+                                </p>
+                            </div>
+                            <div class="col-lg-3">
+                                <br>
+                                <i class="fa-solid fa-phone"></i>
+                                <p class="mb-2">
+                                    <a class="fw-bold" style="text-decoration:none" href="tel:+919940206075">Give us a
+                                        Call <br>+91 9940206075</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End Col -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0576357198474!2d80.22685957507528!3d12.904015487405191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c7e7fd46bcd%3A0xffe7837cb5271453!2sPhysio%20Pulze!5e0!3m2!1sen!2sin!4v1733304011540!5m2!1sen!2sin"
+                            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="container tab-pane" id="pills-profile" role="tabpanel"
+                        aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <br>
+                                <p>@ Perl Singapore Fertility Centre and Research Institute,
+                                    Okkiyiampetai Thuraipakkam, Chennai, Tamil Nadu 600097
+                                </p>
+                                <p>Mon-Sat 2:30pm - 5:30pm</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <br>
+                                <p class="mb-2"><a class="fw-bold" style="text-decoration:none"
+                                        href="tel:+919940206075">Give us a
+                                        Call <br>+91 9940206075</a></p>
+                            </div>
+                        </div>
+                        <!-- End Col -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62328.900872787686!2d80.18813940838407!3d12.904015306689862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d85d00aa95b%3A0x1e28f87bb9b4df12!2sPhysio%20Pulze!5e0!3m2!1sen!2sin!4v1740569238917!5m2!1sen!2sin"
+                            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 {% endblock %}
