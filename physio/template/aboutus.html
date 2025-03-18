@@ -16,7 +16,7 @@
         </nav>
         <h1 class="fw-bold py-2">About Us</h1>
         <div class="row py-2">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <ul>
                     <li>We offer advanced rehab solutions to musculoskeletal 
                         conditions by employing manual therapy, dry needling, 
@@ -28,13 +28,16 @@
                         peadiatric group to adults.</li>
                 </ul>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <ul>
                     <li>We offer consultation and workstation evaluation and 
                             corporates and conduct ergonomic sessions
                             and group therapy since 2018.</li>
                 </ul>
             </div>
+            {% block sidebar %}
+            {% include "sidebar.html" %}
+            {% endblock sidebar %}
             <div class="row py-4">
                 <div class="col-xl-5 col-lg-5 pb-4 pb-sm-5 mb-2 mb-sm-0">
                     <script src="https://static.elfsight.com/platform/platform.js" async></script>
