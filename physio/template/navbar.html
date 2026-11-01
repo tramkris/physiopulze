@@ -1,47 +1,107 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: blue">
-  <div class="container py-4">
-    <a class="navbar-brand fw-bold" style="font-weight:400; font-family:'Lucida Console';font-size: 25px; color:white"
-      href="/">PHYSIO PULZE Physiotherapy</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        {% with url_name=request.resolver_match.url_name %}
-        <li class="nav-item px-3">
-          <a class="nav-link fs-6 fw-bold {% if url_name == 'home' %} active text-white{% endif %}" aria-current="page"
-            href="/">Home</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link fs-6 fw-bold {% if url_name == 'aboutus' %}active text-white{% endif %}"
-            aria-current="page" href="/about-us">About Us</a>
-        </li>
-        <li class="nav-item dropdown px-3">
-          <a class="nav-link fs-6 fw-bold {% if url_name in "backpain,jointpain, neckpain, headaches, strainssprains, sportsinjury, treatmentsoffered, orthorehabilitation, neurorehabilitation"%}active text-white{% endif %} dropdown-toggle"
-            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            aria-haspopup="true">
-            Treatments Offered
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/back-pain">Back pain</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/joint-pain">Joint Pain</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/neck-pain">Neck Pain</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/head-aches">Headaches</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/strains-sprains">Strains & Sprains</a>
-            </li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/sports-injury">Sports Injury</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/ortho-rehabilitation">Ortho
-                Rehabilitation</a></li>
-            <li><a class="dropdown-item fw-bold " href="/treatments-offered/neuro-rehabilitation">Neuro
-                Rehabilitation</a></li>
-          </ul>
-        <li class="nav-item px-3">
-          <a class="nav-link fs-6 fw-bold {% if url_name == 'contactus' %}active text-white{% endif %}"
-            aria-current="page" href='/contact-us'>Contact Us</a>
-        </li>
-        {% endwith %}
-      </ul>
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm custom-navbar">
+    <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'images/physio_pulze_logo.png' %}"
+                alt="Physio Pulze Logo"
+                class="me-3">
+
+            <div>
+                <div class="brand-title">
+                    Physio Pulze
+                </div>
+
+                <div class="brand-tagline">
+                    Pain Relief • Rehabilitation • Recovery
+                </div>
+            </div>
+        </a>
+
+        <!-- Mobile Toggle -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarSupportedContent">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item px-2">
+                    <a class="nav-link fw-bold" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item px-2">
+                    <a class="nav-link fw-bold" href="/about-us">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown px-2">
+
+                    <a class="nav-link dropdown-toggle fw-bold"
+                       role="button"
+                       data-bs-toggle="dropdown">
+
+                        Treatments
+
+                    </a>
+
+                    <ul class="dropdown-menu shadow">
+
+                        <li><a class="dropdown-item" href="/treatments-offered/back-pain">Back Pain</a></li>
+
+                        <li><a class="dropdown-item" href="/treatments-offered/joint-pain">Joint Pain</a></li>
+
+                        <li><a class="dropdown-item" href="/treatments-offered/neck-pain">Neck Pain</a></li>
+
+                        <li><a class="dropdown-item" href="/treatments-offered/sports-injury">Sports Injury</a></li>
+
+                        <li><a class="dropdown-item" href="/treatments-offered/ortho-rehabilitation">Ortho Rehabilitation</a></li>
+
+                        <li><a class="dropdown-item" href="/treatments-offered/neuro-rehabilitation">Neuro Rehabilitation</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item px-2">
+                    <a class="nav-link fw-bold" href="/contact-us">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex gap-2 mobile-actions">
+
+                <a href="tel:+919940206075"
+                class="btn btn-light btn-call fw-bold">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    Call
+                </a>
+
+                <a href="https://wa.me/919940206075"
+                target="_blank"
+                class="btn btn-success btn-whatsapp fw-bold">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
 </nav>

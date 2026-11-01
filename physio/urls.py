@@ -32,5 +32,6 @@ urlpatterns = [
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}),
-    path('robots.txt/', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"))
+    path('robots.txt/', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path('privacy-policy/', views.privacy_policy, name="privacy_policy")
 ]

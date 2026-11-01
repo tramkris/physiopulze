@@ -76,3 +76,6 @@ def orthorehabilitation(request):
 
 def neurorehabilitation(request):
    return render(request,'treatments-offered/neuro-rehabilitation.html')
+
+def privacy_policy(request):
+    return render(request, "privacy_policy.html")
